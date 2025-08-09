@@ -1,8 +1,11 @@
 **Portfolio Application**
-*Overview*
+
+***Overview***
+
 This is a full-stack developer portfolio application built with modern web technologies. It showcases a professional portfolio for "Mugabe Trinity" featuring sections for skills, projects, about information, and contact functionality. The application uses a clean, modern design with smooth animations and responsive layouts.
 
 ***System Architecture***
+
 The application follows a full-stack architecture with clear separation between client and server components:
 
 Frontend: React-based SPA with TypeScript
@@ -12,7 +15,8 @@ Styling: Tailwind CSS with shadcn/ui components
 Build System: Vite for frontend, esbuild for backend
 Development Environment: Replit with integrated PostgreSQL
 
-**Key Components**2
+**Key Components**
+
 Frontend Architecture
 Framework: React 18 with TypeScript
 Routing: Wouter for client-side routing
@@ -23,6 +27,7 @@ Animations: Framer Motion for smooth transitions and scroll-based animations
 Form Handling: React Hook Form with Zod validation
 
 *Backend Architecture*
+
 Server: Express.js with TypeScript
 Database ORM: Drizzle ORM with PostgreSQL dialect
 Database Provider: Neon Database (serverless PostgreSQL)
@@ -35,6 +40,7 @@ Schema Location: shared/schema.ts for type sharing between client and server
 Migrations: Drizzle Kit for database migrations in migrations/ directory
 
 *UI Component System*
+
 Design System: shadcn/ui with "new-york" style variant
 Theme: Custom color palette with CSS variables for light/dark mode support
 Typography: Inter font family for modern, readable text
@@ -42,6 +48,7 @@ Icons: Font Awesome icons and Lucide React icons
 Responsive Design: Mobile-first approach with Tailwind breakpoints
 
 *Data Flow*
+
 Contact Form Submission
 User fills out contact form with validation
 Form data validated client-side with Zod
@@ -51,6 +58,7 @@ Success/error response sent back to client
 Toast notification displays result to user
 
 *Portfolio Data*
+
 Static portfolio data stored in client/src/lib/portfolio-data.ts
 Includes developer information, skills, and project details
 Images served from Unsplash CDN for demo purposes
