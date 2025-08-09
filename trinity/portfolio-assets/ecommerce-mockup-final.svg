@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="900" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="700" y="50" fill="#1f2937" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle">RwandaShop E-commerce Platform</text>
+  <text x="700" y="80" fill="#6b7280" font-family="Arial" font-size="16" text-anchor="middle">Complete e-commerce solution with React, TypeScript, Node.js &amp; PostgreSQL</text>
+  
+  <!-- Browser Frame 1 - Homepage -->
+  <rect x="50" y="120" width="600" height="350" fill="#fff" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <rect x="50" y="120" width="600" height="30" fill="#f3f4f6" rx="8 8 0 0"/>
+  <circle cx="70" cy="135" r="6" fill="#ef4444"/>
+  <circle cx="90" cy="135" r="6" fill="#f59e0b"/>
+  <circle cx="110" cy="135" r="6" fill="#10b981"/>
+  <text x="325" y="140" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">rwandashop.com</text>
+  
+  <!-- Homepage Content -->
+  <rect x="60" y="160" width="580" height="40" fill="#1f2937"/>
+  <text x="80" y="185" fill="#fff" font-family="Arial" font-size="16" font-weight="bold">RwandaShop</text>
+  <text x="560" y="185" fill="#fff" font-family="Arial" font-size="12">+(250)780152723</text>
+  
+  <rect x="60" y="200" width="580" height="35" fill="#374151"/>
+  <text x="80" y="222" fill="#fff" font-family="Arial" font-size="14">All Products</text>
+  <text x="180" y="222" fill="#fff" font-family="Arial" font-size="14">Clothing</text>
+  <text x="250" y="222" fill="#fff" font-family="Arial" font-size="14">Tableware</text>
+  <text x="330" y="222" fill="#fff" font-family="Arial" font-size="14">Kitchen</text>
+  
+  <text x="320" y="270" fill="#1f2937" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Shop by Category</text>
+  
+  <!-- Category Grid -->
+  <rect x="80" y="300" width="120" height="80" fill="#f3f4f6" rx="8"/>
+  <text x="140" y="345" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Clothing</text>
+  
+  <rect x="220" y="300" width="120" height="80" fill="#f3f4f6" rx="8"/>
+  <text x="280" y="345" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Tableware</text>
+  
+  <rect x="360" y="300" width="120" height="80" fill="#f3f4f6" rx="8"/>
+  <text x="420" y="345" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Kitchen</text>
+  
+  <rect x="500" y="300" width="120" height="80" fill="#f3f4f6" rx="8"/>
+  <text x="560" y="345" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Home Decor</text>
+  
+  <!-- Browser Frame 2 - Product Detail -->
+  <rect x="750" y="120" width="600" height="350" fill="#fff" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <rect x="750" y="120" width="600" height="30" fill="#f3f4f6" rx="8 8 0 0"/>
+  <circle cx="770" cy="135" r="6" fill="#ef4444"/>
+  <circle cx="790" cy="135" r="6" fill="#f59e0b"/>
+  <circle cx="810" cy="135" r="6" fill="#10b981"/>
+  <text x="1050" y="140" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">rwandashop.com/product/wool-scarf</text>
+  
+  <!-- Product Detail Content -->
+  <rect x="770" y="170" width="280" height="200" fill="#f3f4f6" rx="8"/>
+  <text x="910" y="275" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">Wool Scarf Image</text>
+  
+  <text x="1070" y="190" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Wool Scarf</text>
+  <text x="1070" y="220" fill="#3b82f6" font-family="Arial" font-size="18" font-weight="bold">23 988 RF</text>
+  <text x="1070" y="240" fill="#10b981" font-family="Arial" font-size="14">✓ In Stock</text>
+  <text x="1070" y="265" fill="#6b7280" font-family="Arial" font-size="12">Soft wool scarf to keep you warm</text>
+  <text x="1070" y="280" fill="#6b7280" font-family="Arial" font-size="12">during the winter.</text>
+  
+  <rect x="1070" y="300" width="120" height="35" fill="#1f2937" rx="4"/>
+  <text x="1130" y="322" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Add to Cart</text>
+  
+  <!-- Admin Dashboard Frame -->
+  <rect x="50" y="500" width="600" height="350" fill="#fff" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <rect x="50" y="500" width="600" height="30" fill="#f3f4f6" rx="8 8 0 0"/>
+  <circle cx="70" cy="515" r="6" fill="#ef4444"/>
+  <circle cx="90" cy="515" r="6" fill="#f59e0b"/>
+  <circle cx="110" cy="515" r="6" fill="#10b981"/>
+  <text x="350" y="520" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">admin.rwandashop.com</text>
+  
+  <text x="80" y="560" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Order Management</text>
+  <text x="580" y="560" fill="#6b7280" font-family="Arial" font-size="14">8 Total Orders</text>
+  
+  <!-- Orders List -->
+  <rect x="70" y="580" width="560" height="60" fill="#f9fafb" stroke="#e5e7eb" rx="4"/>
+  <text x="90" y="600" fill="#1f2937" font-family="Arial" font-size="14" font-weight="bold">Order #8</text>
+  <rect x="90" y="605" width="50" height="18" fill="#f59e0b" rx="3"/>
+  <text x="115" y="617" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Pending</text>
+  <text x="90" y="630" fill="#6b7280" font-family="Arial" font-size="12">Mugabe trinity • 142 534 RF</text>
+  
+  <rect x="70" y="650" width="560" height="60" fill="#f9fafb" stroke="#e5e7eb" rx="4"/>
+  <text x="90" y="670" fill="#1f2937" font-family="Arial" font-size="14" font-weight="bold">Order #9</text>
+  <rect x="90" y="675" width="50" height="18" fill="#f59e0b" rx="3"/>
+  <text x="115" y="687" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Pending</text>
+  <text x="90" y="700" fill="#6b7280" font-family="Arial" font-size="12">Income tax • 38 867 RF</text>
+  
+  <!-- Mobile View -->
+  <rect x="750" y="500" width="200" height="350" fill="#1f2937" rx="20"/>
+  <rect x="760" y="520" width="180" height="310" fill="#fff" rx="10"/>
+  
+  <rect x="760" y="520" width="180" height="40" fill="#3b82f6"/>
+  <text x="850" y="545" fill="#fff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">RwandaShop</text>
+  
+  <text x="780" y="580" fill="#1f2937" font-family="Arial" font-size="14" font-weight="bold">New Arrivals</text>
+  
+  <rect x="780" y="600" width="75" height="60" fill="#f3f4f6" rx="4"/>
+  <text x="817" y="635" fill="#6b7280" font-family="Arial" font-size="8" text-anchor="middle">Product</text>
+  
+  <rect x="865" y="600" width="75" height="60" fill="#f3f4f6" rx="4"/>
+  <text x="902" y="635" fill="#6b7280" font-family="Arial" font-size="8" text-anchor="middle">Product</text>
+  
+  <text x="780" y="685" fill="#1f2937" font-family="Arial" font-size="12" font-weight="bold">Knit Sweater</text>
+  <text x="780" y="700" fill="#3b82f6" font-family="Arial" font-size="11" font-weight="bold">43 188 RF</text>
+  
+  <rect x="780" y="710" width="60" height="25" fill="#10b981" rx="3"/>
+  <text x="810" y="726" fill="#fff" font-family="Arial" font-size="9" text-anchor="middle">In Stock</text>
+  
+  <!-- Tech Stack -->
+  <rect x="1000" y="520" width="350" height="120" fill="#f8fafc" stroke="#e5e7eb" rx="8"/>
+  <text x="1175" y="545" fill="#1f2937" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Technology Stack</text>
+  
+  <rect x="1020" y="560" width="60" height="25" fill="#3b82f6" rx="4"/>
+  <text x="1050" y="577" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">React</text>
+  
+  <rect x="1090" y="560" width="80" height="25" fill="#8b5cf6" rx="4"/>
+  <text x="1130" y="577" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">TypeScript</text>
+  
+  <rect x="1180" y="560" width="70" height="25" fill="#10b981" rx="4"/>
+  <text x="1215" y="577" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">Node.js</text>
+  
+  <rect x="1260" y="560" width="80" height="25" fill="#ef4444" rx="4"/>
+  <text x="1300" y="577" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">PostgreSQL</text>
+  
+  <rect x="1020" y="595" width="75" height="25" fill="#06b6d4" rx="4"/>
+  <text x="1057" y="612" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">Tailwind</text>
+  
+  <rect x="1105" y="595" width="70" height="25" fill="#f59e0b" rx="4"/>
+  <text x="1140" y="612" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">Express</text>
+  
+  <rect x="1185" y="595" width="60" height="25" fill="#84cc16" rx="4"/>
+  <text x="1215" y="612" fill="#fff" font-family="Arial" font-size="11" text-anchor="middle">Drizzle</text>
+  
+  <!-- Features List -->
+  <text x="1000" y="680" fill="#1f2937" font-family="Arial" font-size="16" font-weight="bold">Key Features:</text>
+  <text x="1000" y="700" fill="#6b7280" font-family="Arial" font-size="13">• Shopping cart with real-time updates</text>
+  <text x="1000" y="720" fill="#6b7280" font-family="Arial" font-size="13">• Order management system</text>
+  <text x="1000" y="740" fill="#6b7280" font-family="Arial" font-size="13">• Admin dashboard for inventory</text>
+  <text x="1000" y="760" fill="#6b7280" font-family="Arial" font-size="13">• Rwanda Franc currency support</text>
+  <text x="1000" y="780" fill="#6b7280" font-family="Arial" font-size="13">• Mobile-responsive design</text>
+  <text x="1000" y="800" fill="#6b7280" font-family="Arial" font-size="13">• Secure payment processing</text>
+  
+  <!-- Live Demo Button -->
+  <rect x="1000" y="820" width="100" height="35" fill="#3b82f6" rx="6"/>
+  <text x="1050" y="842" fill="#fff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Live Demo</text>
+  
+  <rect x="1110" y="820" width="80" height="35" fill="transparent" stroke="#6b7280" stroke-width="2" rx="6"/>
+  <text x="1150" y="842" fill="#6b7280" font-family="Arial" font-size="13" text-anchor="middle">GitHub</text>
+</svg>

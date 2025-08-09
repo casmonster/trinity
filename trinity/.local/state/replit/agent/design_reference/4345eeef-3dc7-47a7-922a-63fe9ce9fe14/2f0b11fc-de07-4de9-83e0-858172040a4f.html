@@ -1,0 +1,738 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwame Asante - Senior Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'african-gold': '#B8860B',
+                        'african-peru': '#CD853F',
+                        'african-sienna': '#A0522D',
+                        'african-chocolate': '#D2691E',
+                        'african-tomato': '#FF6347',
+                        'african-gold-light': '#FFD700',
+                        'african-brown': '#2F1B14',
+                        'african-cream': '#F5E6D3'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif']
+                    },
+                    backgroundImage: {
+                        'african-pattern': 'linear-gradient(45deg, #B8860B 0%, #CD853F 100%)',
+                        'geometric-pattern': `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CD853F' fill-opacity='0.1'%3E%3Cpath d='M30 30L15 15v30l15-15zm0 0l15 15V15L30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-african-cream text-african-brown">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-african-peru/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-display font-bold text-african-gold">Kwame Asante</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-african-brown hover:text-african-gold transition-colors">Home</a>
+                    <a href="#about" class="text-african-brown hover:text-african-gold transition-colors">About</a>
+                    <a href="#projects" class="text-african-brown hover:text-african-gold transition-colors">Projects</a>
+                    <a href="#skills" class="text-african-brown hover:text-african-gold transition-colors">Skills</a>
+                    <a href="#contact" class="text-african-brown hover:text-african-gold transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-african-brown"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-geometric-pattern relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-gradient-to-br from-african-cream via-african-cream/80 to-african-peru/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="mb-6">
+                        <span class="inline-block px-4 py-2 bg-african-gold/20 text-african-gold rounded-full text-sm font-semibold mb-4">
+                            5+ Years Experience
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-african-brown leading-tight">
+                            Crafting Digital
+                            <span class="text-african-gold block">Experiences</span>
+                            with African Soul
+                        </h1>
+                    </div>
+                    <p class="text-lg text-african-brown/80 mb-8 leading-relaxed">
+                        Senior Frontend Developer from Lagos, Nigeria, blending modern web technologies with African aesthetic principles to create exceptional user experiences for global audiences.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="px-8 py-4 bg-african-gold text-white rounded-lg hover:bg-african-peru transition-colors font-semibold">
+                            View My Work
+                        </button>
+                        <button class="px-8 py-4 border-2 border-african-gold text-african-gold rounded-lg hover:bg-african-gold hover:text-white transition-colors font-semibold">
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-african-gold shadow-2xl relative z-10">
+                            <!-- African tech professional portrait -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                                 alt="Kwame Asante - Senior Frontend Developer" 
+                                 class="w-full h-full object-cover" data-mock="true" />
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-african-tomato rounded-full opacity-80"></div>
+                        <div class="absolute -bottom-8 -left-8 w-16 h-16 bg-african-gold-light rounded-full opacity-60"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="absolute inset-0 bg-geometric-pattern opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-african-brown mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-african-gold mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- African cultural workspace -->
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern African workspace with cultural elements" 
+                         class="rounded-2xl shadow-xl w-full h-auto" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-display font-semibold text-african-brown mb-6">
+                        Bridging Technology and Culture
+                    </h3>
+                    <p class="text-african-brown/80 mb-6 leading-relaxed">
+                        Born and raised in Lagos, Nigeria, I've spent the last 5 years crafting digital experiences that resonate with diverse audiences across Africa and beyond. My journey in frontend development began with a passion for making technology accessible and beautiful.
+                    </p>
+                    <p class="text-african-brown/80 mb-8 leading-relaxed">
+                        I specialize in React, Vue.js, and modern JavaScript frameworks, with a keen eye for UI/UX design that incorporates African aesthetic principles. My work spans from fintech solutions serving millions across West Africa to international SaaS platforms.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center p-4 bg-african-cream rounded-lg">
+                            <div class="text-2xl font-bold text-african-gold mb-2">50+</div>
+                            <div class="text-sm text-african-brown">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-4 bg-african-cream rounded-lg">
+                            <div class="text-2xl font-bold text-african-gold mb-2">5+</div>
+                            <div class="text-sm text-african-brown">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-african-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-african-brown mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-african-gold mx-auto mb-6"></div>
+                <p class="text-lg text-african-brown/80 max-w-2xl mx-auto">
+                    A showcase of my journey from junior to senior developer, featuring projects that blend cutting-edge technology with African innovation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: African E-commerce Platform -->
+                <!-- @COMPONENT: ProjectCard [title, description, image, tech stack, year] -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- E-commerce platform interface -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="African e-commerce platform interface" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">AfroMarket</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2024</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            E-commerce platform connecting African artisans with global customers. Built with React, Node.js, and integrated payment systems.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">TypeScript</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Stripe</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Fintech Dashboard -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- Fintech dashboard interface -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Modern fintech dashboard with analytics" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">PayFlow Dashboard</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2023</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            Financial analytics dashboard for African fintech startup. Features real-time data visualization and transaction monitoring.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Vue.js</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">D3.js</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">GraphQL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Cultural Heritage App -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- Cultural heritage mobile app interface -->
+                    <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="African cultural heritage mobile app design" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">Heritage Explorer</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2023</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            Interactive cultural heritage app showcasing African traditions, languages, and historical sites through immersive storytelling.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">React Native</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Firebase</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">AR.js</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: SaaS Platform -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- SaaS platform interface -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Modern SaaS platform dashboard interface" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">TeamSync Pro</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2022</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            Collaborative project management SaaS with real-time features, serving teams across 15 African countries.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Angular</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Socket.io</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Agricultural Tech Platform -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- Agricultural technology platform -->
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Agricultural technology platform interface" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">FarmConnect</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2022</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            Digital platform connecting African farmers with markets, weather data, and agricultural resources.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">PWA</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">API Integration</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Education Platform -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                    <!-- Online education platform interface -->
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Online education platform with African students" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-african-brown">EduAfrica</h3>
+                            <span class="text-sm text-african-gold bg-african-gold/20 px-2 py-1 rounded">2021</span>
+                        </div>
+                        <p class="text-african-brown/70 mb-4">
+                            Online learning platform providing quality education to students across rural Africa with offline capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Vue.js</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">Offline First</span>
+                            <span class="text-xs bg-african-peru/20 text-african-peru px-2 py-1 rounded">WebRTC</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </button>
+                            <button class="text-african-gold hover:text-african-peru transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ProjectCard -->
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="px-8 py-4 bg-african-gold text-white rounded-lg hover:bg-african-peru transition-colors font-semibold">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white relative">
+        <div class="absolute inset-0 bg-geometric-pattern opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-african-brown mb-4">Technical Expertise</h2>
+                <div class="w-24 h-1 bg-african-gold mx-auto mb-6"></div>
+                <p class="text-lg text-african-brown/80 max-w-2xl mx-auto">
+                    Five years of continuous learning and growth in modern web technologies, with a focus on creating scalable, accessible solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-african-brown mb-8">Frontend Technologies</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">React.js</span>
+                                <span class="text-african-gold">95%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">Vue.js</span>
+                                <span class="text-african-gold">90%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">TypeScript</span>
+                                <span class="text-african-gold">88%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">Angular</span>
+                                <span class="text-african-gold">82%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">Next.js</span>
+                                <span class="text-african-gold">85%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-african-brown mb-8">Tools & Backend</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">Node.js</span>
+                                <span class="text-african-gold">85%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">GraphQL</span>
+                                <span class="text-african-gold">80%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">AWS/Cloud</span>
+                                <span class="text-african-gold">75%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">Docker</span>
+                                <span class="text-african-gold">70%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-african-brown">UI/UX Design</span>
+                                <span class="text-african-gold">92%</span>
+                            </div>
+                            <div class="w-full bg-african-cream rounded-full h-3">
+                                <div class="bg-african-gold h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-african-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-african-brown mb-4">What Clients Say</h2>
+                <div class="w-24 h-1 bg-african-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <!-- African business leader portrait -->
+                        <img src="https://pixabay.com/get/gcea04889b4b0f1f208fe62df15b905701d61981021a93c456345627b0be1e523dac27ba3e35d7a3664498a85dfd7332e1b6fab6a3a3eab48b4a8bea4cc7ec52a_1280.jpg" 
+                             alt="Adaora Okafor - CEO of NigeriaFintech" 
+                             class="w-16 h-16 rounded-full object-cover mr-4" data-mock="true" />
+                        <div>
+                            <div class="font-semibold text-african-brown" data-bind="testimonial.author">Adaora Okafor</div>
+                            <div class="text-sm text-african-brown/70" data-bind="testimonial.position">CEO, NigeriaFintech</div>
+                        </div>
+                    </div>
+                    <p class="text-african-brown/80 mb-4" data-bind="testimonial.content">
+                        "Kwame transformed our fintech platform with his exceptional React skills and deep understanding of African user needs. His cultural insight made all the difference."
+                    </p>
+                    <div class="flex text-african-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <!-- International client portrait -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" 
+                             alt="James Mitchell - CTO of TechGlobal" 
+                             class="w-16 h-16 rounded-full object-cover mr-4" data-mock="true" />
+                        <div>
+                            <div class="font-semibold text-african-brown" data-bind="testimonial.author">James Mitchell</div>
+                            <div class="text-sm text-african-brown/70" data-bind="testimonial.position">CTO, TechGlobal</div>
+                        </div>
+                    </div>
+                    <p class="text-african-brown/80 mb-4" data-bind="testimonial.content">
+                        "Working with Kwame was incredible. His technical expertise in Vue.js and attention to detail delivered exactly what we needed for our international expansion."
+                    </p>
+                    <div class="flex text-african-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <!-- African startup founder portrait -->
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" 
+                             alt="Fatima Al-Rashid - Founder of EduConnect" 
+                             class="w-16 h-16 rounded-full object-cover mr-4" data-mock="true" />
+                        <div>
+                            <div class="font-semibold text-african-brown" data-bind="testimonial.author">Fatima Al-Rashid</div>
+                            <div class="text-sm text-african-brown/70" data-bind="testimonial.position">Founder, EduConnect</div>
+                        </div>
+                    </div>
+                    <p class="text-african-brown/80 mb-4" data-bind="testimonial.content">
+                        "Kwame's ability to create offline-first applications was crucial for reaching students in rural areas. His empathy and technical skills are unmatched."
+                    </p>
+                    <div class="flex text-african-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-geometric-pattern opacity-5"></div>
+        <!-- African cityscape background -->
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
+                 alt="Lagos, Nigeria skyline at sunset" 
+                 class="w-full h-full object-cover" />
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-african-brown mb-4">Let's Build Something Amazing</h2>
+                <div class="w-24 h-1 bg-african-gold mx-auto mb-6"></div>
+                <p class="text-lg text-african-brown/80 max-w-2xl mx-auto">
+                    Ready to bring your vision to life? Let's discuss how we can create exceptional digital experiences together.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-african-brown mb-8">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-african-gold/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-african-gold"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-african-brown">Location</div>
+                                <div class="text-african-brown/70">Lagos, Nigeria</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-african-gold/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-african-gold"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-african-brown">Email</div>
+                                <div class="text-african-brown/70" data-bind="contact.email">kwame@example.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-african-gold/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-african-gold"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-african-brown">Phone</div>
+                                <div class="text-african-brown/70" data-bind="contact.phone">+234 803 123 4567</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-african-brown mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-african-gold text-white rounded-full flex items-center justify-center hover:bg-african-peru transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-african-gold text-white rounded-full flex items-center justify-center hover:bg-african-peru transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-african-gold text-white rounded-full flex items-center justify-center hover:bg-african-peru transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-african-gold text-white rounded-full flex items-center justify-center hover:bg-african-peru transition-colors">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-african-brown mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-african-brown/20 rounded-lg focus:ring-2 focus:ring-african-gold focus:border-african-gold transition-colors" data-implementation="Controlled input component">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-african-brown mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-african-brown/20 rounded-lg focus:ring-2 focus:ring-african-gold focus:border-african-gold transition-colors" data-implementation="Controlled input component">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-african-brown mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-african-brown/20 rounded-lg focus:ring-2 focus:ring-african-gold focus:border-african-gold transition-colors" data-implementation="Controlled input component">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-african-brown mb-2">Project Type</label>
+                            <select class="w-full px-4 py-3 border border-african-brown/20 rounded-lg focus:ring-2 focus:ring-african-gold focus:border-african-gold transition-colors" data-implementation="Controlled select component">
+                                <option data-mock="true">Website Development</option>
+                                <option data-mock="true">Mobile App</option>
+                                <option data-mock="true">SaaS Platform</option>
+                                <option data-mock="true">E-commerce</option>
+                                <option data-mock="true">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-african-brown mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-african-brown/20 rounded-lg focus:ring-2 focus:ring-african-gold focus:border-african-gold transition-colors" placeholder="Tell me about your project..." data-implementation="Controlled textarea component"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-african-gold text-white py-4 rounded-lg hover:bg-african-peru transition-colors font-semibold" data-event="click:handleSubmit" data-implementation="Should validate form before submission">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-african-brown text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-6">
+                    <span class="text-2xl font-display font-bold text-african-gold">Kwame Asante</span>
+                    <p class="text-white/80 mt-2">Senior Frontend Developer</p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#home" class="text-white/80 hover:text-african-gold transition-colors">Home</a>
+                    <a href="#about" class="text-white/80 hover:text-african-gold transition-colors">About</a>
+                    <a href="#projects" class="text-white/80 hover:text-african-gold transition-colors">Projects</a>
+                    <a href="#skills" class="text-white/80 hover:text-african-gold transition-colors">Skills</a>
+                    <a href="#contact" class="text-white/80 hover:text-african-gold transition-colors">Contact</a>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <p class="text-white/60">© 2024 Kwame Asante. All rights reserved. Built with passion in Lagos, Nigeria.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-african-gold');
+                    link.classList.add('text-african-brown');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.remove('text-african-brown');
+                        link.classList.add('text-african-gold');
+                    }
+                });
+            });
+
+            // Form submission handler
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Form validation would go here
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                });
+            }
+
+            // Project card interaction
+            document.querySelectorAll('.group').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

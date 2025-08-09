@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="700" fill="#f8fafc"/>
+  
+  <!-- Section Header -->
+  <text x="600" y="50" fill="#1f2937" font-family="Arial" font-size="36" font-weight="bold" text-anchor="middle">Technical Skills</text>
+  <text x="600" y="80" fill="#6b7280" font-family="Arial" font-size="18" text-anchor="middle">A comprehensive toolkit for building modern web applications</text>
+  
+  <!-- Skills Grid - Row 1 -->
+  <defs>
+    <linearGradient id="jsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- JavaScript Card -->
+  <rect x="100" y="120" width="200" height="120" fill="url(#jsGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="200" y="150" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">JavaScript</text>
+  <text x="200" y="170" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">ES6+, Modern JS, Async/Await</text>
+  <text x="120" y="200" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="120" y="215" fill="#fff" font-family="Arial" font-size="10">• E-commerce Platform</text>
+  <text x="120" y="228" fill="#fff" font-family="Arial" font-size="10">• Portfolio Website</text>
+  
+  <!-- React Card -->
+  <rect x="320" y="120" width="200" height="120" fill="url(#reactGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="420" y="150" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">React</text>
+  <text x="420" y="170" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Hooks, Context, Component Design</text>
+  <text x="340" y="200" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="340" y="215" fill="#fff" font-family="Arial" font-size="10">• RwandaShop E-commerce</text>
+  <text x="340" y="228" fill="#fff" font-family="Arial" font-size="10">• Interactive Portfolio</text>
+  
+  <!-- TypeScript Card -->
+  <rect x="540" y="120" width="200" height="120" fill="url(#tsGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="640" y="150" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">TypeScript</text>
+  <text x="640" y="170" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Type Safety, Interfaces, Generics</text>
+  <text x="560" y="200" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="560" y="215" fill="#fff" font-family="Arial" font-size="10">• Full-stack Applications</text>
+  <text x="560" y="228" fill="#fff" font-family="Arial" font-size="10">• API Development</text>
+  
+  <!-- Node.js Card -->
+  <rect x="760" y="120" width="200" height="120" fill="url(#nodeGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="860" y="150" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Node.js</text>
+  <text x="860" y="170" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Express, REST APIs, Middleware</text>
+  <text x="780" y="200" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="780" y="215" fill="#fff" font-family="Arial" font-size="10">• E-commerce Backend</text>
+  <text x="780" y="228" fill="#fff" font-family="Arial" font-size="10">• Database APIs</text>
+  
+  <!-- Skills Grid - Row 2 -->
+  <defs>
+    <linearGradient id="tailwindGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="figmaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#db2777;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#84cc16;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#65a30d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Tailwind CSS Card -->
+  <rect x="100" y="260" width="200" height="120" fill="url(#tailwindGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="200" y="290" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Tailwind CSS</text>
+  <text x="200" y="310" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Utility-first, Responsive Design</text>
+  <text x="120" y="340" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="120" y="355" fill="#fff" font-family="Arial" font-size="10">• RwandaShop UI</text>
+  <text x="120" y="368" fill="#fff" font-family="Arial" font-size="10">• Portfolio Styling</text>
+  
+  <!-- PostgreSQL Card -->
+  <rect x="320" y="260" width="200" height="120" fill="url(#pgGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="420" y="290" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">PostgreSQL</text>
+  <text x="420" y="310" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Database Design, Drizzle ORM</text>
+  <text x="340" y="340" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="340" y="355" fill="#fff" font-family="Arial" font-size="10">• E-commerce Database</text>
+  <text x="340" y="368" fill="#fff" font-family="Arial" font-size="10">• User Management</text>
+  
+  <!-- Figma Card -->
+  <rect x="540" y="260" width="200" height="120" fill="url(#figmaGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="640" y="290" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Figma</text>
+  <text x="640" y="310" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">UI/UX Design, Prototyping</text>
+  <text x="560" y="340" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="560" y="355" fill="#fff" font-family="Arial" font-size="10">• E-commerce Mockups</text>
+  <text x="560" y="368" fill="#fff" font-family="Arial" font-size="10">• User Interface Design</text>
+  
+  <!-- Git & GitHub Card -->
+  <rect x="760" y="260" width="200" height="120" fill="url(#gitGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="860" y="290" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Git &amp; GitHub</text>
+  <text x="860" y="310" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Version Control, Collaboration</text>
+  <text x="780" y="340" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="780" y="355" fill="#fff" font-family="Arial" font-size="10">• LocalDiscountMart Repo</text>
+  <text x="780" y="368" fill="#fff" font-family="Arial" font-size="10">• Open Source Contributions</text>
+  
+  <!-- Skills Grid - Row 3 (Additional) -->
+  <defs>
+    <linearGradient id="responsiveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="performanceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Responsive Design Card -->
+  <rect x="210" y="400" width="200" height="120" fill="url(#responsiveGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="310" y="430" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Responsive Design</text>
+  <text x="310" y="450" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Mobile-first, Cross-browser</text>
+  <text x="230" y="480" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="230" y="495" fill="#fff" font-family="Arial" font-size="10">• Mobile E-commerce</text>
+  <text x="230" y="508" fill="#fff" font-family="Arial" font-size="10">• Adaptive Layouts</text>
+  
+  <!-- Performance Optimization Card -->
+  <rect x="430" y="400" width="200" height="120" fill="url(#performanceGradient)" rx="12" filter="url(#cardShadow)"/>
+  <text x="530" y="430" fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Performance</text>
+  <text x="530" y="450" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Optimization, SEO, Accessibility</text>
+  <text x="450" y="480" fill="#fff" font-family="Arial" font-size="10">Projects:</text>
+  <text x="450" y="495" fill="#fff" font-family="Arial" font-size="10">• Fast Loading Sites</text>
+  <text x="450" y="508" fill="#fff" font-family="Arial" font-size="10">• SEO Optimization</text>
+  
+  <!-- Real Portfolio Integration Card -->
+  <rect x="650" y="400" width="320" height="120" fill="#1f2937" rx="12" filter="url(#cardShadow)"/>
+  <text x="810" y="430" fill="#fff" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Featured in Real Projects</text>
+  <text x="670" y="455" fill="#10b981" font-family="Arial" font-size="12">✓ RwandaShop E-commerce Platform</text>
+  <text x="670" y="470" fill="#3b82f6" font-family="Arial" font-size="12">✓ Interactive Portfolio Website</text>
+  <text x="670" y="485" fill="#f59e0b" font-family="Arial" font-size="12">✓ Admin Dashboard Systems</text>
+  <text x="670" y="500" fill="#ec4899" font-family="Arial" font-size="12">✓ Responsive UI Components</text>
+  
+  <!-- Interactive Indicator -->
+  <text x="600" y="580" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">Click any skill card to see related projects in my portfolio</text>
+  
+  <!-- Skill Level Indicators -->
+  <rect x="100" y="550" width="200" height="4" fill="#e5e7eb" rx="2"/>
+  <rect x="100" y="550" width="180" height="4" fill="#10b981" rx="2"/>
+  <text x="200" y="570" fill="#6b7280" font-family="Arial" font-size="10" text-anchor="middle">Advanced</text>
+  
+  <rect x="320" y="550" width="200" height="4" fill="#e5e7eb" rx="2"/>
+  <rect x="320" y="550" width="190" height="4" fill="#3b82f6" rx="2"/>
+  <text x="420" y="570" fill="#6b7280" font-family="Arial" font-size="10" text-anchor="middle">Expert</text>
+  
+  <rect x="540" y="550" width="200" height="4" fill="#e5e7eb" rx="2"/>
+  <rect x="540" y="550" width="170" height="4" fill="#8b5cf6" rx="2"/>
+  <text x="640" y="570" fill="#6b7280" font-family="Arial" font-size="10" text-anchor="middle">Advanced</text>
+  
+  <rect x="760" y="550" width="200" height="4" fill="#e5e7eb" rx="2"/>
+  <rect x="760" y="550" width="180" height="4" fill="#10b981" rx="2"/>
+  <text x="860" y="570" fill="#6b7280" font-family="Arial" font-size="10" text-anchor="middle">Advanced</text>
+</svg>

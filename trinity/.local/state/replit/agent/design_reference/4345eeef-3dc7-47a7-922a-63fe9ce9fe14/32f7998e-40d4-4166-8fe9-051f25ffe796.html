@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    primary: '#2563EB',
+                    secondary: '#1E293B',
+                    accent: '#F59E0B',
+                }
+            }
+        }
+    };
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 text-slate-800">
+
+    <!-- @COMPONENT: Navigation -->
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold gradient-text">Alex Johnson</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="#projects" class="text-slate-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="text-slate-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-slate-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-slate-800">
+                            Hi, I'm <span class="gradient-text">Alex Johnson</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl text-slate-600 font-light">
+                            Full Stack Developer & UI/UX Designer
+                        </h2>
+                        <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                            I create beautiful, responsive web applications using modern technologies. 
+                            Passionate about clean code, user experience, and solving complex problems.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="flex space-x-6">
+                        <a href="https://github.com" class="text-slate-600 hover:text-primary transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="text-slate-600 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://twitter.com" class="text-slate-600 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Professional developer portrait - main hero image -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                         alt="Professional developer portrait" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-2xl" data-mock="true">
+                    
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
+                        <i class="fas fa-code text-primary text-2xl"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg">
+                        <i class="fas fa-laptop-code text-accent text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">About Me</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    I'm a passionate full-stack developer with 5+ years of experience creating 
+                    innovative web solutions that drive business growth and user engagement.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Professional developer portrait 2 -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                             alt="Developer working at desk" 
+                             class="rounded-xl shadow-lg w-full h-48 object-cover" data-mock="true">
+                        
+                        <!-- Modern workspace image -->
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                             alt="Modern developer workspace with multiple monitors" 
+                             class="rounded-xl shadow-lg w-full h-48 object-cover" data-mock="true">
+                    </div>
+                    
+                    <!-- Tech gadgets and devices -->
+                    <img src="https://pixabay.com/get/g70654e0a664053939042e72e593d6987913e1db657ded69911777aa36254bc3927cb9cc82f391b1c8308abb2923ef8f418931a26318dcab1791b6258580e89dd_1280.jpg" 
+                         alt="Collection of modern tech gadgets and devices on desk" 
+                         class="rounded-xl shadow-lg w-full h-32 object-cover" data-mock="true">
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-slate-800">My Journey</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Started as a curious computer science student, I've evolved into a versatile 
+                            developer who loves turning complex problems into simple, beautiful solutions. 
+                            I specialize in React, Node.js, and modern web technologies.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-slate-800">Skills & Technologies</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-3">
+                                <h4 class="font-semibold text-slate-700">Frontend</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <h4 class="font-semibold text-slate-700">Backend</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">50+</div>
+                            <div class="text-sm text-slate-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">5+</div>
+                            <div class="text-sm text-slate-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">100%</div>
+                            <div class="text-sm text-slate-600">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    A showcase of my recent work in web development, from e-commerce platforms 
+                    to productivity tools and everything in between.
+                </p>
+            </div>
+
+            <!-- @MAP: projects.map(project => ( -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: E-commerce Platform -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- E-commerce website project screenshot -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Modern e-commerce website interface" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">E-commerce Platform</h3>
+                        <p class="text-slate-600 mb-4">
+                            Full-stack e-commerce solution with React, Node.js, and Stripe integration. 
+                            Features include user authentication, cart management, and admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Stripe</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management App -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- Task management app interface -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Clean task management application interface" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Task Management App</h3>
+                        <p class="text-slate-600 mb-4">
+                            Collaborative project management tool built with Vue.js and Firebase. 
+                            Real-time updates, team collaboration, and progress tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Firebase</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Vuetify</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Social Media Dashboard -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- Social media analytics dashboard -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Analytics dashboard with charts and graphs" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Social Media Dashboard</h3>
+                        <p class="text-slate-600 mb-4">
+                            Analytics dashboard for social media managers. Features data visualization, 
+                            scheduling tools, and performance metrics with D3.js charts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">D3.js</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Express</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Weather App -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- Weather application interface -->
+                    <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Beautiful weather application interface with forecast" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Weather Forecast App</h3>
+                        <p class="text-slate-600 mb-4">
+                            Beautiful weather application with 7-day forecasts, interactive maps, 
+                            and location-based services. Built with React Native for mobile.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React Native</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Expo</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Maps API</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Blog Platform -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- Blog platform interface -->
+                    <img src="https://pixabay.com/get/g8794d4e0f612c6d8b8824cc7eb56d188f9da4557c541e994f5a8c95e1ef241c40d2af53884fe280725f4bf273f7dfd3c06bba7bc7d05e4f83335ff80843a9ce6_1280.jpg" 
+                         alt="Modern blog platform with clean typography" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Blog Platform</h3>
+                        <p class="text-slate-600 mb-4">
+                            Full-featured blogging platform with markdown support, user authentication, 
+                            comments system, and SEO optimization built with Next.js.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-black text-white px-2 py-1 rounded text-sm">Next.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">TypeScript</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Prisma</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Cryptocurrency Tracker -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <!-- Cryptocurrency tracking app -->
+                    <img src="https://pixabay.com/get/g9ef3ba6b1c6a14986f67f63bf8d9e6e4de0c6695e6dc2c1411928ad829db855626d05117a0210e5403a95c2ff860b8d26bbe2f65efe64eed8f2672ccc522b0b9_1280.jpg" 
+                         alt="Cryptocurrency trading interface with charts" 
+                         class="w-full h-48 object-cover" data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Crypto Tracker</h3>
+                        <p class="text-slate-600 mb-4">
+                            Real-time cryptocurrency tracking application with portfolio management, 
+                            price alerts, and detailed market analysis using CoinGecko API.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Chart.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">API</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+
+            <div class="text-center mt-12">
+                <a href="https://github.com" class="bg-slate-800 text-white px-8 py-3 rounded-lg hover:bg-slate-700 transition-colors font-medium">
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">Let's Work Together</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Have a project in mind? I'd love to hear about it. 
+                    Let's discuss how we can bring your ideas to life.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <!-- Professional developer portrait 3 -->
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                         alt="Professional developer in modern office setting" 
+                         class="w-full rounded-xl shadow-lg" data-mock="true">
+                    
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-slate-800">Get In Touch</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            I'm always open to discussing new opportunities, creative ideas, 
+                            or just having a friendly chat about technology and development.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-3 rounded-lg">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-slate-800">Email</div>
+                                    <div class="text-slate-600">alex.johnson@example.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-3 rounded-lg">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-slate-800">Phone</div>
+                                    <div class="text-slate-600">+1 (555) 123-4567</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-3 rounded-lg">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-slate-800">Location</div>
+                                    <div class="text-slate-600">San Francisco, CA</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com" class="bg-slate-100 hover:bg-slate-200 p-3 rounded-lg transition-colors">
+                                <i class="fab fa-linkedin text-slate-600"></i>
+                            </a>
+                            <a href="https://github.com" class="bg-slate-100 hover:bg-slate-200 p-3 rounded-lg transition-colors">
+                                <i class="fab fa-github text-slate-600"></i>
+                            </a>
+                            <a href="https://twitter.com" class="bg-slate-100 hover:bg-slate-200 p-3 rounded-lg transition-colors">
+                                <i class="fab fa-twitter text-slate-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-50 rounded-2xl p-8">
+                    <form class="space-y-6" data-implementation="Handle form submission with validation">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="John" data-bind="form.firstName">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Doe" data-bind="form.lastName">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="john@example.com" data-bind="form.email">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Project Discussion" data-bind="form.subject">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                            <textarea rows="6" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors resize-none" placeholder="Tell me about your project..." data-bind="form.message"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium" data-event="click:handleSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="text-2xl font-bold">Alex Johnson</div>
+                    <p class="text-slate-300">
+                        Full Stack Developer passionate about creating amazing web experiences.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-slate-300 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="text-slate-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com" class="text-slate-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-slate-300 hover:text-white transition-colors">Home</a>
+                        <a href="#about" class="block text-slate-300 hover:text-white transition-colors">About</a>
+                        <a href="#projects" class="block text-slate-300 hover:text-white transition-colors">Projects</a>
+                        <a href="#contact" class="block text-slate-300 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Services</h4>
+                    <div class="space-y-2">
+                        <div class="text-slate-300">Web Development</div>
+                        <div class="text-slate-300">UI/UX Design</div>
+                        <div class="text-slate-300">Mobile Apps</div>
+                        <div class="text-slate-300">Consulting</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 mt-12 pt-8 text-center">
+                <p class="text-slate-300">
+                    © 2024 Alex Johnson. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+    (function() {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button');
+        const navigation = document.querySelector('nav');
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                // Mobile menu functionality would go here
+                console.log('Mobile menu toggle clicked');
+            });
+        }
+
+        // Form submission handler
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic form validation
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Here you would typically send the data to your backend
+                console.log('Form submitted:', data);
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                
+                // Reset form
+                this.reset();
+            });
+        }
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards for scroll animations
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+MUGABE TRINITY
+Frontend Developer & UI/UX Designer
+
+CONTACT INFORMATION
+Email: mugabe.trinity@example.com
+Phone: +(250) 780 152 723
+Location: Kigali, Rwanda
+
+SOCIAL MEDIA
+LinkedIn: linkedin.com/in/mugabe-trinity
+X (Twitter): @Mugabetrinity
+GitHub: github.com/mugabetrinity
+
+PROFESSIONAL SUMMARY
+Passionate frontend developer with 5+ years of experience creating engaging digital experiences with modern web technologies. Specialized in user-centered design and clean, efficient code.
+
+EXPERIENCE
+Frontend Developer (5+ Years)
+• Developed responsive web applications using React, JavaScript, and CSS
+• Collaborated with design teams to implement UI/UX designs
+• Optimized web performance and accessibility standards
+• Built interactive user interfaces with smooth animations
+
+TECHNICAL SKILLS
+• Frontend: React, JavaScript, TypeScript, HTML5, CSS3
+• UI/UX Design: Figma, Adobe Creative Suite, Responsive Design
+• Development: Git, GitHub, Agile Development, Mobile-First Approach
+• Performance: Web Optimization, Accessibility Standards
+
+PROJECTS
+• E-commerce Platform - Modern shopping experience with React
+• Task Management App - Collaborative productivity tool
+• Portfolio Management System - Content management for creatives
