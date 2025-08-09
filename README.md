@@ -1,6 +1,6 @@
 **Portfolio Application**
 *Overview*
-This is a full-stack developer portfolio application built with modern web technologies. It showcases a professional portfolio for "Samuel Oladipupo" featuring sections for skills, projects, about information, and contact functionality. The application uses a clean, modern design with smooth animations and responsive layouts.
+This is a full-stack developer portfolio application built with modern web technologies. It showcases a professional portfolio for "Mugabe Trinity" featuring sections for skills, projects, about information, and contact functionality. The application uses a clean, modern design with smooth animations and responsive layouts.
 
 ***System Architecture***
 The application follows a full-stack architecture with clear separation between client and server components:
@@ -12,7 +12,7 @@ Styling: Tailwind CSS with shadcn/ui components
 Build System: Vite for frontend, esbuild for backend
 Development Environment: Replit with integrated PostgreSQL
 
-*Key Components*
+/$##**Key Components**##$/
 Frontend Architecture
 Framework: React 18 with TypeScript
 Routing: Wouter for client-side routing
