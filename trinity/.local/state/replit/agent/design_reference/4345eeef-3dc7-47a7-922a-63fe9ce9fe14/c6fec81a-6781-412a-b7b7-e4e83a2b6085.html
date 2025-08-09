@@ -1,0 +1,606 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563EB',
+                        'secondary': '#1E293B',
+                        'accent': '#F59E0B',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter text-gray-800 bg-white">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold text-secondary">Alex Johnson</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-600 hover:text-primary transition-colors duration-200">Home</a>
+                        <a href="#about" class="nav-link text-gray-600 hover:text-primary transition-colors duration-200">About</a>
+                        <a href="#projects" class="nav-link text-gray-600 hover:text-primary transition-colors duration-200">Projects</a>
+                        <a href="#contact" class="nav-link text-gray-600 hover:text-primary transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn text-gray-600 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-primary">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50 pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight mb-6">
+                        Hi, I'm <span class="text-primary">Alex Johnson</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                        Full-Stack Web Developer specializing in React, Node.js, and modern web technologies. I create seamless digital experiences that solve real-world problems.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#projects" class="btn-primary bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 text-center">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn-secondary border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-center">
+                            Get In Touch
+                        </a>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative">
+                        <!-- Professional developer portrait with modern tech setup -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                             alt="Alex Johnson - Professional Developer Portrait" 
+                             class="w-80 h-80 rounded-full object-cover shadow-2xl border-8 border-white"
+                             data-mock="true" />
+                        <div class="absolute -bottom-4 -right-4 bg-accent text-white p-4 rounded-full shadow-lg">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    I'm a passionate web developer with 5+ years of experience building scalable applications and user-friendly interfaces. I love turning complex problems into simple, beautiful solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <!-- Modern workspace with multiple monitors and clean setup -->
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern developer workspace with multiple monitors" 
+                         class="rounded-xl shadow-lg w-full h-auto"
+                         data-mock-image="true" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">My Journey</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Started as a curious computer science student, I've evolved into a full-stack developer who thrives on creating efficient, scalable solutions. My experience spans from startups to enterprise applications, always focusing on clean code and exceptional user experiences.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring aspiring developers in the community.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <div class="text-2xl font-bold text-primary mb-2">50+</div>
+                            <div class="text-sm text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <div class="text-2xl font-bold text-primary mb-2">5+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-secondary mb-8">Technologies & Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fab fa-react text-3xl mb-2"></i>
+                        <div class="font-semibold">React</div>
+                    </div>
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fab fa-node-js text-3xl mb-2"></i>
+                        <div class="font-semibold">Node.js</div>
+                    </div>
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fab fa-js-square text-3xl mb-2"></i>
+                        <div class="font-semibold">JavaScript</div>
+                    </div>
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fab fa-python text-3xl mb-2"></i>
+                        <div class="font-semibold">Python</div>
+                    </div>
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fas fa-database text-3xl mb-2"></i>
+                        <div class="font-semibold">MongoDB</div>
+                    </div>
+                    <div class="skill-card p-4 bg-slate-50 rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer">
+                        <i class="fab fa-aws text-3xl mb-2"></i>
+                        <div class="font-semibold">AWS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Here are some of my recent web development projects that showcase my skills in modern technologies and problem-solving.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Modern e-commerce website interface with clean design -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="E-commerce platform interface showing modern design" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">MongoDB</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Task management dashboard with clean interface -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Task management dashboard interface with organized layout" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">
+                            Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Socket.io</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Social media app interface with modern design -->
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Social media application interface with modern layout" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Social Media Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            Analytics dashboard for social media management with data visualization, scheduling tools, and performance tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Express</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Real estate web application interface -->
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Real estate web application with property listings" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Real Estate Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Property listing platform with advanced search, virtual tours, and mortgage calculator. Includes agent dashboard and CRM features.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Fitness tracking app interface -->
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Fitness tracking application with workout data visualization" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Fitness Tracker App</h3>
+                        <p class="text-gray-600 mb-4">
+                            Progressive Web App for fitness tracking with workout logging, progress visualization, and social features for motivation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PWA</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Chart.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Workbox</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <!-- Cryptocurrency portfolio tracker interface -->
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Cryptocurrency portfolio tracking dashboard with charts" 
+                         class="w-full h-48 object-cover"
+                         data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Crypto Portfolio Tracker</h3>
+                        <p class="text-gray-600 mb-4">
+                            Real-time cryptocurrency portfolio tracker with price alerts, market analysis, and portfolio performance metrics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">API Integration</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">WebSocket</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">Let's Work Together</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to bring your ideas to life? I'm always excited to discuss new projects and opportunities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Get In Touch</h3>
+                    <div class="mb-8">
+                        <!-- Modern office workspace with laptop and coffee -->
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                             alt="Modern office workspace with laptop and coffee setup" 
+                             class="rounded-xl shadow-lg w-full h-auto"
+                             data-mock-image="true" />
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-secondary">Email</div>
+                                <div class="text-gray-600" data-bind="user.email">alex@example.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-secondary">Phone</div>
+                                <div class="text-gray-600" data-bind="user.phone">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-secondary">Location</div>
+                                <div class="text-gray-600" data-bind="user.location">San Francisco, CA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="space-y-6" data-implementation="Should handle form submission and validation">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-secondary mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="Your Name" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-secondary mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="your.email@example.com" />
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-secondary mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="Project Discussion" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-secondary mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 resize-none"
+                                      placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                data-event="click:handleFormSubmit">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Alex Johnson</h3>
+                    <p class="text-gray-300 mb-4">
+                        Full-Stack Web Developer passionate about creating exceptional digital experiences.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-200">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Web Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Mobile Development</li>
+                        <li>Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2024 Alex Johnson. All rights reserved. Built with passion and modern web technologies.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Active navigation highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-link');
+            
+            function highlightActiveSection() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('text-primary');
+                    if (item.getAttribute('href') === `#${current}`) {
+                        item.classList.add('text-primary');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightActiveSection);
+            highlightActiveSection(); // Call once on load
+
+            // Form submission handler
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // @FUNCTIONALITY: Implement form validation and submission
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                });
+            }
+
+            // Project card hover effects
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Skill card hover effects
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

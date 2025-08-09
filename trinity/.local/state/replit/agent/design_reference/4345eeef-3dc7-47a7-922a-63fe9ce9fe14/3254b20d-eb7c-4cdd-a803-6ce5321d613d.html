@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E293B',
+                        accent: '#0EA5E9',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 text-slate-700">
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <!-- Professional developer portrait with rounded corners -->
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                 alt="Alex Johnson - Professional Developer Portrait" 
+                 class="w-48 h-48 rounded-full mx-auto mb-8 shadow-2xl object-cover border-4 border-white" 
+                 data-mock="true" />
+            
+            <h1 class="text-5xl md:text-6xl font-bold text-secondary mb-4" data-bind="developer.name">
+                Alex Johnson
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-6" data-bind="developer.title">
+                Full Stack Developer & UI/UX Enthusiast
+            </p>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8" data-bind="developer.bio">
+                I craft beautiful, functional web experiences with 5+ years of expertise in modern technologies. 
+                Passionate about creating solutions that make a difference.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                    View Projects
+                </a>
+                <a href="#contact" class="border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Technical Skills</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    A comprehensive toolkit for building modern web applications
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 fade-in">
+                <!-- @MAP: skills.map(skill => ( -->
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-js-square text-3xl mb-3 text-yellow-500"></i>
+                    <h3 class="font-semibold">JavaScript</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-react text-3xl mb-3 text-blue-500"></i>
+                    <h3 class="font-semibold">React</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-node-js text-3xl mb-3 text-green-500"></i>
+                    <h3 class="font-semibold">Node.js</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-python text-3xl mb-3 text-blue-600"></i>
+                    <h3 class="font-semibold">Python</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fas fa-database text-3xl mb-3 text-orange-500"></i>
+                    <h3 class="font-semibold">MongoDB</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-aws text-3xl mb-3 text-orange-600"></i>
+                    <h3 class="font-semibold">AWS</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-docker text-3xl mb-3 text-blue-600"></i>
+                    <h3 class="font-semibold">Docker</h3>
+                </div>
+                <div class="skill-badge bg-slate-50 p-6 rounded-xl text-center hover:bg-primary hover:text-white cursor-pointer">
+                    <i class="fab fa-figma text-3xl mb-3 text-purple-500"></i>
+                    <h3 class="font-semibold">Figma</h3>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+
+    <!-- @COMPONENT: Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Featured Projects</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    A showcase of my recent work in web development and digital solutions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: projects.map(project => ( -->
+                <!-- E-commerce Platform -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Modern e-commerce dashboard with analytics and product management interface -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="E-commerce Platform Dashboard" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">E-commerce Platform</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features admin dashboard, inventory management, and mobile-responsive design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Management App -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Clean task management interface with kanban boards and productivity features -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Task Management Application Interface" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Task Management App</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features built with Vue.js and Firebase.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Dashboard -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Comprehensive analytics dashboard with charts, graphs and data visualization -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Analytics Dashboard with Data Visualization" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Analytics Dashboard</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Real-time analytics dashboard with interactive charts, data visualization, and custom reporting features. Built with React and D3.js for data visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">D3.js</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Express</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Platform -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Modern social media interface with posts, interactions and user profiles -->
+                    <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Social Media Platform Interface" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Social Media Platform</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Full-featured social media platform with real-time messaging, post sharing, user authentication, and responsive design optimized for mobile and desktop.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Socket.io</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fitness Tracking App -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Modern fitness app interface with workout tracking and progress visualization -->
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Fitness Tracking Application Interface" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Fitness Tracking App</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Mobile-first fitness tracking application with workout planning, progress tracking, and social features. Built with React Native and Node.js backend.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Redis</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Management -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Professional portfolio management system with project showcases -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Portfolio Management System Interface" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Portfolio Management System</h3>
+                        <p class="text-slate-600 mb-4" data-bind="project.description">
+                            Content management system for creative professionals to showcase their work with customizable themes, client galleries, and integrated contact forms.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-slate-600 hover:text-slate-800 font-medium">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: About/Experience Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-secondary mb-6">About Me</h2>
+                    <p class="text-lg text-slate-600 mb-6" data-bind="developer.aboutDescription">
+                        I'm a passionate full-stack developer with over 5 years of experience creating digital solutions 
+                        that combine beautiful design with robust functionality. My journey started with a curiosity for 
+                        how things work on the web, and it has evolved into a career focused on crafting exceptional user experiences.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-8" data-bind="developer.experienceDescription">
+                        I specialize in modern JavaScript frameworks, cloud infrastructure, and agile development practices. 
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, 
+                        or mentoring aspiring developers in my community.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <h3 class="text-2xl font-bold text-primary mb-1" data-bind="stats.projectsCompleted">50+</h3>
+                            <p class="text-slate-600">Projects Completed</p>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <h3 class="text-2xl font-bold text-primary mb-1" data-bind="stats.yearsExperience">5+</h3>
+                            <p class="text-slate-600">Years Experience</p>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <h3 class="text-2xl font-bold text-primary mb-1" data-bind="stats.happyClients">30+</h3>
+                            <p class="text-slate-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <h3 class="text-2xl font-bold text-primary mb-1" data-bind="stats.technologies">20+</h3>
+                            <p class="text-slate-600">Technologies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 fade-in">
+                    <!-- Professional workspace setup with modern monitor and coding environment -->
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Modern Developer Workspace" 
+                         class="rounded-xl shadow-lg w-full h-48 object-cover" />
+                    
+                    <!-- Clean coding setup with laptop and development tools -->
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Coding Setup with Laptop" 
+                         class="rounded-xl shadow-lg w-full h-48 object-cover" />
+                    
+                    <!-- Modern office workspace with multiple monitors and professional setup -->
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Professional Office Workspace" 
+                         class="rounded-xl shadow-lg w-full h-48 object-cover" />
+                    
+                    <!-- Creative workspace with design tools and development environment -->
+                    <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                         alt="Creative Development Workspace" 
+                         class="rounded-xl shadow-lg w-full h-48 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About/Experience Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="fade-in mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Let's Work Together</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss opportunities? I'd love to hear from you. 
+                    Let's create something amazing together.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12 fade-in">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Email</h3>
+                    <p class="text-slate-600" data-bind="contact.email">alex.johnson@example.com</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Phone</h3>
+                    <p class="text-slate-600" data-bind="contact.phone">+1 (555) 123-4567</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Location</h3>
+                    <p class="text-slate-600" data-bind="contact.location">San Francisco, CA</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 fade-in">
+                <form class="max-w-2xl mx-auto" data-implementation="Contact form should validate inputs and submit via API">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Your Name" required
+                               class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                        <input type="email" placeholder="Your Email" required
+                               class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    </div>
+                    <input type="text" placeholder="Subject" required
+                           class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent mb-6" />
+                    <textarea placeholder="Your Message" rows="6" required
+                              class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent mb-6 resize-none"></textarea>
+                    <button type="submit" 
+                            class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                            data-event="click:handleContactSubmit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex justify-center gap-6 mt-12 fade-in">
+                <a href="#" class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                    <i class="fab fa-dribbble"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-slate-300" data-bind="footer.copyright">
+                © 2024 Alex Johnson. All rights reserved. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Smooth scroll animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Form submission handler
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // @FUNCTIONALITY: Implement form validation and submission
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#heroGradient)"/>
+  
+  <!-- Navigation -->
+  <rect x="0" y="0" width="1200" height="70" fill="rgba(255,255,255,0.1)"/>
+  <text x="50" y="45" fill="#fff" font-family="Arial" font-size="20" font-weight="bold">Mugabe Trinity</text>
+  <text x="950" y="45" fill="#fff" font-family="Arial" font-size="16">About</text>
+  <text x="1020" y="45" fill="#fff" font-family="Arial" font-size="16">Skills</text>
+  <text x="1080" y="45" fill="#fff" font-family="Arial" font-size="16">Projects</text>
+  <text x="1150" y="45" fill="#fff" font-family="Arial" font-size="16">Contact</text>
+  
+  <!-- Hero Content -->
+  <text x="100" y="180" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">Hi, I'm</text>
+  <text x="100" y="220" fill="#fff" font-family="Arial" font-size="48" font-weight="bold">Mugabe Trinity</text>
+  <text x="100" y="260" fill="#fff" font-family="Arial" font-size="32" opacity="0.9">Frontend Developer</text>
+  <text x="100" y="290" fill="#fff" font-family="Arial" font-size="24" opacity="0.8">&amp; UI/UX Designer</text>
+  
+  <text x="100" y="340" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">I create engaging digital experiences with modern web</text>
+  <text x="100" y="365" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">technologies. Passionate about user-centered design and</text>
+  <text x="100" y="390" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">clean, efficient code.</text>
+  <text x="100" y="425" fill="#fff" font-family="Arial" font-size="16" opacity="0.8">Based in Kigali, Rwanda</text>
+  
+  <!-- CTA Buttons -->
+  <rect x="100" y="460" width="150" height="50" fill="#fff" rx="25"/>
+  <text x="175" y="490" fill="#667eea" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">View Projects</text>
+  
+  <rect x="270" y="460" width="130" height="50" fill="transparent" stroke="#fff" stroke-width="2" rx="25"/>
+  <text x="335" y="490" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Get In Touch</text>
+  
+  <rect x="420" y="460" width="150" height="50" fill="rgba(255,255,255,0.2)" rx="25"/>
+  <text x="495" y="490" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Download CV (PDF)</text>
+  
+  <!-- Profile Image Area -->
+  <circle cx="800" cy="350" r="120" fill="rgba(255,255,255,0.2)" filter="url(#glow)"/>
+  <circle cx="800" cy="350" r="110" fill="rgba(255,255,255,0.15)"/>
+  <text x="800" y="330" fill="#fff" font-family="Arial" font-size="14" text-anchor="middle">Mugabe Trinity</text>
+  <text x="800" y="350" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Frontend Developer</text>
+  <text x="800" y="370" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Kigali, Rwanda</text>
+  
+  <!-- Floating Skills -->
+  <rect x="650" y="200" width="80" height="30" fill="rgba(255,255,255,0.2)" rx="15"/>
+  <text x="690" y="220" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">React</text>
+  
+  <rect x="900" y="180" width="100" height="30" fill="rgba(255,255,255,0.2)" rx="15"/>
+  <text x="950" y="200" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">TypeScript</text>
+  
+  <rect x="620" y="480" width="90" height="30" fill="rgba(255,255,255,0.2)" rx="15"/>
+  <text x="665" y="500" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Node.js</text>
+  
+  <rect x="950" y="450" width="100" height="30" fill="rgba(255,255,255,0.2)" rx="15"/>
+  <text x="1000" y="470" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Tailwind CSS</text>
+  
+  <!-- Social Links -->
+  <circle cx="100" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="100" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">in</text>
+  
+  <circle cx="150" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="150" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Git</text>
+  
+  <circle cx="200" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="200" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">X</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="120" r="8" fill="rgba(255,255,255,0.3)" opacity="0.7"/>
+  <circle cx="950" cy="150" r="12" fill="rgba(255,255,255,0.2)" opacity="0.5"/>
+  <circle cx="200" cy="650" r="6" fill="rgba(255,255,255,0.4)" opacity="0.8"/>
+  <circle cx="1000" cy="700" r="10" fill="rgba(255,255,255,0.3)" opacity="0.6"/>
+  <circle cx="1150" cy="250" r="15" fill="rgba(255,255,255,0.2)" opacity="0.4"/>
+  
+  <!-- Location Indicator -->
+  <text x="100" y="600" fill="#fff" font-family="Arial" font-size="14" opacity="0.7">📍 Available for freelance opportunities</text>
+  
+  <!-- Portfolio Stats -->
+  <rect x="450" y="550" width="300" height="80" fill="rgba(255,255,255,0.1)" rx="10"/>
+  <text x="600" y="575" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Portfolio Highlights</text>
+  <text x="500" y="595" fill="#fff" font-family="Arial" font-size="12">✓ 5+ Years Experience</text>
+  <text x="500" y="610" fill="#fff" font-family="Arial" font-size="12">✓ 50+ Projects Completed</text>
+  <text x="500" y="625" fill="#fff" font-family="Arial" font-size="12">✓ React &amp; TypeScript Expert</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#heroGradient)"/>
+  <!-- Navigation -->
+  <rect x="0" y="0" width="1200" height="70" fill="rgba(255,255,255,0.1)" backdrop-filter="blur(10px)"/>
+  <text x="50" y="45" fill="#fff" font-family="Arial" font-size="20" font-weight="bold">Mugabe Trinity</text>
+  <text x="950" y="45" fill="#fff" font-family="Arial" font-size="16">About</text>
+  <text x="1020" y="45" fill="#fff" font-family="Arial" font-size="16">Skills</text>
+  <text x="1080" y="45" fill="#fff" font-family="Arial" font-size="16">Projects</text>
+  <text x="1150" y="45" fill="#fff" font-family="Arial" font-size="16">Contact</text>
+  
+  <!-- Hero Content -->
+  <text x="100" y="200" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">Hi, I'm</text>
+  <text x="100" y="240" fill="#fff" font-family="Arial" font-size="48" font-weight="bold">Mugabe Trinity</text>
+  <text x="100" y="280" fill="#fff" font-family="Arial" font-size="32" opacity="0.9">Frontend Developer</text>
+  <text x="100" y="310" fill="#fff" font-family="Arial" font-size="24" opacity="0.8">&amp; UI/UX Designer</text>
+  
+  <text x="100" y="360" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">Passionate about creating beautiful, functional</text>
+  <text x="100" y="385" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">web experiences with modern technologies.</text>
+  <text x="100" y="410" fill="#fff" font-family="Arial" font-size="18" opacity="0.9">Based in Kigali, Rwanda.</text>
+  
+  <!-- CTA Buttons -->
+  <rect x="100" y="450" width="150" height="50" fill="#fff" rx="25"/>
+  <text x="175" y="480" fill="#667eea" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">View Projects</text>
+  
+  <rect x="270" y="450" width="130" height="50" fill="transparent" stroke="#fff" stroke-width="2" rx="25"/>
+  <text x="335" y="480" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Download CV</text>
+  
+  <!-- Profile Image Placeholder -->
+  <circle cx="800" cy="350" r="150" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="800" cy="350" r="140" fill="rgba(255,255,255,0.1)"/>
+  <text x="800" y="360" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Profile Photo</text>
+  
+  <!-- Floating Elements -->
+  <circle cx="150" cy="150" r="8" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="950" cy="200" r="12" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="200" cy="600" r="6" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="1000" cy="650" r="10" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Social Links -->
+  <circle cx="100" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="100" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Li</text>
+  
+  <circle cx="150" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="150" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Gh</text>
+  
+  <circle cx="200" cy="550" r="25" fill="rgba(255,255,255,0.2)"/>
+  <text x="200" y="558" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">X</text>
+</svg>

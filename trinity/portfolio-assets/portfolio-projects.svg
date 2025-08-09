@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#f8fafc"/>
+  <!-- Section Header -->
+  <text x="600" y="50" fill="#1f2937" font-family="Arial" font-size="36" font-weight="bold" text-anchor="middle">Featured Projects</text>
+  <text x="600" y="80" fill="#6b7280" font-family="Arial" font-size="18" text-anchor="middle">Some of my recent work</text>
+  
+  <!-- Project 1 - E-commerce Platform -->
+  <rect x="50" y="120" width="350" height="280" fill="#fff" stroke="#e5e7eb" rx="12"/>
+  <rect x="70" y="140" width="310" height="180" fill="#f3f4f6" rx="8"/>
+  <text x="225" y="235" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">E-commerce Screenshot</text>
+  
+  <text x="70" y="350" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">E-commerce Platform</text>
+  <text x="70" y="370" fill="#6b7280" font-family="Arial" font-size="14">Complete e-commerce solution for LocalDiscountMart</text>
+  <text x="70" y="385" fill="#6b7280" font-family="Arial" font-size="14">with shopping cart and order management.</text>
+  
+  <!-- Tech Stack -->
+  <rect x="70" y="400" width="45" height="20" fill="#3b82f6" rx="3"/>
+  <text x="92" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">React</text>
+  
+  <rect x="120" y="400" width="60" height="20" fill="#8b5cf6" rx="3"/>
+  <text x="150" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">TypeScript</text>
+  
+  <rect x="185" y="400" width="50" height="20" fill="#10b981" rx="3"/>
+  <text x="210" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Node.js</text>
+  
+  <!-- Action Buttons -->
+  <rect x="70" y="430" width="80" height="30" fill="#3b82f6" rx="5"/>
+  <text x="110" y="450" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Live Demo</text>
+  
+  <rect x="160" y="430" width="70" height="30" fill="transparent" stroke="#6b7280" rx="5"/>
+  <text x="195" y="450" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">GitHub</text>
+  
+  <!-- Project 2 - Portfolio Website -->
+  <rect x="420" y="120" width="350" height="280" fill="#fff" stroke="#e5e7eb" rx="12"/>
+  <rect x="440" y="140" width="310" height="180" fill="#f3f4f6" rx="8"/>
+  <text x="595" y="235" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">Portfolio Screenshot</text>
+  
+  <text x="440" y="350" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Portfolio Website</text>
+  <text x="440" y="370" fill="#6b7280" font-family="Arial" font-size="14">Professional responsive portfolio with modern</text>
+  <text x="440" y="385" fill="#6b7280" font-family="Arial" font-size="14">animations and interactive features.</text>
+  
+  <!-- Tech Stack -->
+  <rect x="440" y="400" width="45" height="20" fill="#3b82f6" rx="3"/>
+  <text x="462" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">React</text>
+  
+  <rect x="490" y="400" width="55" height="20" fill="#06b6d4" rx="3"/>
+  <text x="517" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Tailwind</text>
+  
+  <rect x="550" y="400" width="50" height="20" fill="#ec4899" rx="3"/>
+  <text x="575" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Motion</text>
+  
+  <!-- Action Buttons -->
+  <rect x="440" y="430" width="80" height="30" fill="#3b82f6" rx="5"/>
+  <text x="480" y="450" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Live Demo</text>
+  
+  <rect x="530" y="430" width="70" height="30" fill="transparent" stroke="#6b7280" rx="5"/>
+  <text x="565" y="450" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">GitHub</text>
+  
+  <!-- Project 3 - Analytics Dashboard -->
+  <rect x="790" y="120" width="350" height="280" fill="#fff" stroke="#e5e7eb" rx="12"/>
+  <rect x="810" y="140" width="310" height="180" fill="#f3f4f6" rx="8"/>
+  <text x="965" y="235" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">Dashboard Screenshot</text>
+  
+  <text x="810" y="350" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Analytics Dashboard</text>
+  <text x="810" y="370" fill="#6b7280" font-family="Arial" font-size="14">Real-time analytics dashboard with interactive</text>
+  <text x="810" y="385" fill="#6b7280" font-family="Arial" font-size="14">charts and data visualization features.</text>
+  
+  <!-- Tech Stack -->
+  <rect x="810" y="400" width="45" height="20" fill="#3b82f6" rx="3"/>
+  <text x="832" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">React</text>
+  
+  <rect x="860" y="400" width="35" height="20" fill="#f59e0b" rx="3"/>
+  <text x="877" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">D3.js</text>
+  
+  <rect x="900" y="400" width="50" height="20" fill="#10b981" rx="3"/>
+  <text x="925" y="413" fill="#fff" font-family="Arial" font-size="10" text-anchor="middle">Express</text>
+  
+  <!-- Action Buttons -->
+  <rect x="810" y="430" width="80" height="30" fill="#6b7280" rx="5"/>
+  <text x="850" y="450" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Coming Soon</text>
+  
+  <rect x="900" y="430" width="70" height="30" fill="transparent" stroke="#6b7280" rx="5"/>
+  <text x="935" y="450" fill="#6b7280" font-family="Arial" font-size="12" text-anchor="middle">GitHub</text>
+  
+  <!-- Bottom Projects Row -->
+  <!-- Project 4 - Task Management -->
+  <rect x="200" y="450" width="350" height="280" fill="#fff" stroke="#e5e7eb" rx="12"/>
+  <rect x="220" y="470" width="310" height="180" fill="#f3f4f6" rx="8"/>
+  <text x="375" y="565" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">Task Manager Screenshot</text>
+  
+  <text x="220" y="680" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Task Management App</text>
+  <text x="220" y="700" fill="#6b7280" font-family="Arial" font-size="14">Collaborative task management with drag-and-drop</text>
+  <text x="220" y="715" fill="#6b7280" font-family="Arial" font-size="14">functionality and real-time updates.</text>
+  
+  <!-- Project 5 - Social Platform -->
+  <rect x="600" y="450" width="350" height="280" fill="#fff" stroke="#e5e7eb" rx="12"/>
+  <rect x="620" y="470" width="310" height="180" fill="#f3f4f6" rx="8"/>
+  <text x="775" y="565" fill="#6b7280" font-family="Arial" font-size="14" text-anchor="middle">Social Platform Screenshot</text>
+  
+  <text x="620" y="680" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">Social Media Platform</text>
+  <text x="620" y="700" fill="#6b7280" font-family="Arial" font-size="14">Full-featured social media platform with messaging</text>
+  <text x="620" y="715" fill="#6b7280" font-family="Arial" font-size="14">and responsive design for all devices.</text>
+</svg>
