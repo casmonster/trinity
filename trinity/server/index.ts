@@ -4,6 +4,8 @@ import { setupVite, serveStatic, log } from "./vite";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import cookieParser from "cookie-parser";
+import 'dotenv/config';
+
 
 const app = express();
 
