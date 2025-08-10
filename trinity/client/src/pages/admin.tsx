@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+// Use this URL for all API requests
 
 interface Contact {
   id: number;
@@ -12,7 +14,12 @@ interface Contact {
 
 export default function AdminPage() {
   const { data: contacts, isLoading, error } = useQuery<Contact[]>({
-    queryKey: ['/api/contacts'],
+    queryKey: ['contacts'],
+    queryFn: async () => {
+    const res = await fetch(`${apiBaseUrl}/contacts`);
+    if (!res.ok) throw new Error('Network response was not ok');
+    return res.json();
+    },
   });
 
   if (isLoading) {
