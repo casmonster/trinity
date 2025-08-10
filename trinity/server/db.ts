@@ -2,11 +2,7 @@ import { Pool, neonConfig } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-serverless";
 import ws from "ws";
 import * as schema from "@shared/schema";
-
-// Only load .env locally (Vercel uses dashboard env vars)
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv/config");
-}
+import 'dotenv/config';  // this loads .env locally only
 
 neonConfig.webSocketConstructor = ws;
 
