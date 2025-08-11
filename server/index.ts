@@ -1,9 +1,10 @@
-import express, { type Request, Response, NextFunction } from "express";
+import * as express from "express";
+import { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-import cookieParser from "cookie-parser";
+import * as cookieParser from "cookie-parser";
 import 'dotenv/config';
 
 
