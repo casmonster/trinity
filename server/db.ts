@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Load .env from the project root (adjust if needed)
-dotenv.config({ path: resolve(__dirname, ".env") });
+dotenv.config();
 
 import { Pool, neonConfig } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-serverless';
