@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "tailwindcss": "^4.1.11"
+    "@neondatabase/serverless": "^1.0.1",
+    "drizzle-orm": "^0.44.4",
+    "tailwindcss": "^4.1.11",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@types/node": "^24.2.1"
