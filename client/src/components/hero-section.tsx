@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profileImage from "@assets/WhatsApp Image 2025-07-16.jpg";
+import profileImage from "@assets/WhatsApp_Image_2025-07-16.jpg";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
