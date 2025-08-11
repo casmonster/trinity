@@ -1,16 +1,13 @@
-import * as express from "express";
-import { type Request, Response, NextFunction } from "express";
+import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-import * as cookieParser from "cookie-parser";
-import 'dotenv/config';
-
+import cookieParser from "cookie-parser";
 
 const app = express();
 
-// Trust proxy for rate limiting in production
+// Trust proxy for rate limiting in production,
 app.set('trust proxy', 1);
 
 // Security middleware
@@ -116,3 +113,4 @@ app.use((req, res, next) => {
     log(`serving on port ${port}`);
   });
 })();
+
