@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import profileImage from "@assets/WhatsApp Image 2025-07-16 _1752696368082.jpg";
+import profileImage from "./assets/profile.jpg";
 
 const stats = [
   { number: "50+", label: "Projects Completed" },
