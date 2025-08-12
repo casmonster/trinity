@@ -28,7 +28,7 @@ export default defineConfig({
   },
   root: resolve(__dirname, "client"),
   build: {
-   outDir: resolve(__dirname, "client", "dist"),
+   outDir: resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
   server: {
