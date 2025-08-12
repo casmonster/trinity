@@ -1,32 +1,34 @@
 # ---------------------
-# 1. Build frontend
+# 1. Build frontend + backend together
 # ---------------------
-FROM node:18-alpine AS frontend
-WORKDIR /client
-COPY client/package*.json ./
-RUN npm install --frozen-lockfile
-COPY client/ ./
-RUN npm run build
-
-# ---------------------
-# 2. Build backend
-# ---------------------
-FROM node:18-alpine AS backend
+FROM node:18-alpine AS build
 WORKDIR /app
+
+# Install dependencies
 COPY package*.json ./
-RUN npm install --production --frozen-lockfile
+RUN npm install --frozen-lockfile
+
+# Copy all source code
 COPY . .
 
-# Copy built frontend into backend's public directory
-COPY --from=frontend /client/dist ./server/public
-
-# Build backend TypeScript
+# Build frontend first, then backend
+RUN npm run build-frontend
 RUN npm run build-backend
 
-EXPOSE 5000
+# ---------------------
+# 2. Production image
+# ---------------------
+FROM node:18-alpine AS prod
+WORKDIR /app
 
-# Set production environment
+# Copy only necessary files for production
+COPY package*.json ./
+RUN npm install --production --frozen-lockfile
+
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/client/dist ./server/public
+
+EXPOSE 5000
 ENV NODE_ENV=production
 
-# Start backend (serves frontend too)
 CMD ["npm", "start"]
