@@ -1,22 +1,20 @@
 # ---- FRONTEND BUILD ----
 FROM node:20 AS build-frontend
-WORKDIR /app
-COPY client/package*.json ./client/
-RUN cd client && npm install
-COPY client ./client
+WORKDIR /app/client
+COPY client/package*.json ./
+RUN npm install
+COPY client ./
 # Build Vite output directly into server/public
-RUN cd client && npm run build -- --outDir ../server/public
+RUN npm run build -- --outDir ../server/public
 
 # ---- BACKEND BUILD ----
 FROM node:20 AS build-backend
-WORKDIR /app
-COPY server/package*.json ./server/
-RUN cd server && npm install
-COPY server ./server
-# Copy already-built frontend from build-frontend stage
-# (No need to copy public folder, it's already there from frontend build)
-COPY --from=build-frontend /app/server/public ./server/public
-RUN cd server && npm run build
+WORKDIR /app/server
+COPY server/package*.json ./
+RUN npm install
+COPY server ./
+# frontend build already in server/public
+RUN npm run build
 
 # ---- PRODUCTION ----
 FROM node:20-slim AS production
