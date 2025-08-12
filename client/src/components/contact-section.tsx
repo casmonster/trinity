@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/components/ui/hooks/use-toast";
-import { validateContactForm, validateAndSanitizeInput } from "@/lib/security";
+import { apiRequest } from "../lib/queryClient";
+import { useToast } from "../components/ui/hooks/use-toast";
+import { validateContactForm, validateAndSanitizeInput } from "../lib/security";
 
 const contactInfo = [
   {

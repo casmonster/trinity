@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { portfolioData } from "@/lib/portfolio-data";
+import { portfolioData } from "../lib/portfolio-data";
 
 const skills = portfolioData.skills;
 
