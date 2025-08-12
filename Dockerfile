@@ -1,55 +1,58 @@
-# ===============================
-# Stage 1: Build frontend
-# ===============================
-FROM node:18-alpine AS build-frontend
+# ------------------------------------------------------
+# 1. Frontend build stage
+# ------------------------------------------------------
+FROM node:20-alpine AS build-frontend
 WORKDIR /app
 
-# Install dependencies (client + shared only)
-COPY package*.json ./
+# Copy and install frontend dependencies
 COPY client/package*.json ./client/
-COPY shared ./shared
-RUN npm install --workspace client
+WORKDIR /app/client
+RUN npm ci
 
-# Copy source code
-COPY client ./client
-COPY vite.config.ts tsconfig.json ./
-COPY shared ./shared
+# Copy frontend source and build
+COPY client/ .
+RUN npm run build
 
-# Build frontend (output goes to /app/dist/public because of vite.config.ts)
-RUN npm run build --workspace client
-
-# ===============================
-# Stage 2: Build backend
-# ===============================
-FROM node:18-alpine AS build-backend
+# ------------------------------------------------------
+# 2. Backend build stage
+# ------------------------------------------------------
+FROM node:20-alpine AS build-backend
 WORKDIR /app
 
-# Copy full monorepo
-COPY . .
+# Copy and install backend dependencies
+COPY server/package*.json ./server/
+WORKDIR /app/server
+RUN npm ci
 
-# Copy built frontend into server's public folder
-COPY --from=build-frontend /app/dist/public ./server/public
+# Copy backend source
+COPY server/ .
 
-# Install all dependencies
-RUN npm install
+# Copy built frontend into backend's public folder
+# so Express can serve it
+COPY --from=build-frontend /app/client/dist ./public
 
-# Build backend
-RUN npm run build-backend
+# Build backend (e.g., with esbuild, tsc, or vite)
+RUN npm run build
 
-# ===============================
-# Stage 3: Production image
-# ===============================
-FROM node:18-alpine
+# ------------------------------------------------------
+# 3. Final runtime stage
+# ------------------------------------------------------
+FROM node:20-alpine AS production
 WORKDIR /app
 
-# Copy production files
-COPY --from=build-backend /app/dist ./dist
-COPY --from=build-backend /app/package*.json ./
+# Copy production backend build
+COPY --from=build-backend /app/server/dist ./dist
+# Copy node_modules for backend runtime
+COPY --from=build-backend /app/server/node_modules ./node_modules
+# Copy package.json for reference (optional)
+COPY server/package.json .
 
-# Install only production dependencies
-RUN npm install --omit=dev
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=8080
 
-EXPOSE 5000
+# Expose the port Railway will use
+EXPOSE 8080
 
-# Run backend (will also serve frontend from ./dist/public)
-CMD ["npm", "start"]
+# Start the backend
+CMD ["node", "dist/index.js"]
