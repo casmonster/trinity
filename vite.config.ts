@@ -6,35 +6,37 @@ import { dirname, resolve } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-export default defineConfig({
-  plugins: [
+export default defineConfig(async () => {
+  const plugins = [
     react(),
     runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-        ]
-      : []),
-  ],
-  resolve: {
-    alias: {
-       "@": resolve(__dirname, "client", "src"),
-      "@shared": resolve(__dirname, "shared"),
-      "@assets": resolve(__dirname, "client/src/assets"),
+  ];
+
+  if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
+    const { cartographer } = await import("@replit/vite-plugin-cartographer");
+    plugins.push(cartographer());
+  }
+
+  return {
+    plugins,
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "client", "src"),
+        "@shared": resolve(__dirname, "shared"),
+        "@assets": resolve(__dirname, "client/src/assets"),
+      },
     },
-  },
-  root: resolve(__dirname, "client"),
-  build: {
-   outDir: resolve(__dirname, "dist/public"),
-    emptyOutDir: true,
-  },
-  server: {
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
+    root: resolve(__dirname, "client"),
+    build: {
+      outDir: resolve(__dirname, "dist/public"),
+      emptyOutDir: true,
     },
-  },
+    server: {
+      fs: {
+        strict: true,
+        deny: ["**/.*"],
+      },
+    },
+  };
 });
+
