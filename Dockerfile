@@ -26,7 +26,7 @@ COPY package*.json ./
 RUN npm install --production --frozen-lockfile
 
 COPY --from=build /app/dist ./dist
-COPY --from=build /app/client/dist ./server/public
+COPY --from=build /app/dist/public ./server/public
 
 EXPOSE 5000
 ENV NODE_ENV=production
