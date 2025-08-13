@@ -1,6 +1,6 @@
 # ---- FRONTEND BUILD ----
 FROM node:20 AS build-frontend
-WORKDIR /app
+WORKDIR /app/client
 COPY package*.json ./
 RUN npm install
 WORKDIR /app/client
