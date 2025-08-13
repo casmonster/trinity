@@ -2,37 +2,31 @@
 FROM node:20 AS build
 WORKDIR /app
 
-# Install root dependencies
+# Copy package files from root
 COPY package*.json ./
-COPY client/package*.json ./client/
-COPY server/package*.json ./server/
-RUN npm install --workspaces
 
-# Copy source
-COPY client ./client
-COPY server ./server
-COPY shared ./shared
+# Install all dependencies
+RUN npm install
 
-# Build frontend into server/public
+# Copy the whole monorepo
+COPY . .
+
+# Build frontend (Vite) → outputs into server/public
 RUN npm run build-frontend
 
-# Build backend into dist
+# Build backend (TypeScript → dist)
 RUN npm run build-backend
 
 # ---- PRODUCTION STAGE ----
-FROM node:20 AS prod
+FROM node:20-slim AS production
 WORKDIR /app
 
-# Install only prod dependencies
-COPY package*.json ./
-COPY server/package*.json ./server/
-RUN npm install --omit=dev --workspaces
-
-# Copy backend dist and frontend public
+# Copy only necessary files for runtime
 COPY --from=build /app/server/dist ./server/dist
 COPY --from=build /app/server/public ./server/public
-COPY shared ./shared
+COPY --from=build /app/package*.json ./
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/shared ./shared
 
-# Expose and start
 EXPOSE 5000
 CMD ["node", "server/dist/index.js"]
