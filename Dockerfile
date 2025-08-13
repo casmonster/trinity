@@ -14,10 +14,10 @@ FROM node:20-slim AS production
 WORKDIR /app
 
 # Copy backend & frontend outputs
-COPY --from=build /app/dist/server ./server/dist
+COPY --from=build /app/server/dist ./server/dist
 COPY --from=build /app/dist/public ./server/public
 COPY package*.json ./
 RUN npm install --omit=dev
 
 EXPOSE 5000
-CMD ["node", "dist/server/index.js"]
+CMD ["node", "server/dist/index.js"]

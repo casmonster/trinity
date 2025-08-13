@@ -3,8 +3,8 @@
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "outDir": "../dist/server",
-    "rootDir": "..",
+    "outDir": "dist",
+    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -13,11 +13,11 @@
     }
   },
    "include": [
-    "server/**/*.ts",      
+    "**/*.ts",      
     "../shared/**/*.ts",   
     "../vite.config.ts"    
   ],
   "exclude": [
-    "../dist"
+    "dist"
   ]
 }
