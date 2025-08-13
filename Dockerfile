@@ -13,8 +13,8 @@ RUN npm run build-backend
 FROM node:20-slim AS production
 WORKDIR /app
 
-# Copy only necessary files
-COPY --from=build /app/server/dist ./server/dist
+# Copy backend & frontend outputs
+COPY --from=build /app/dist/server ./server/dist
 COPY --from=build /app/dist/public ./server/public
 COPY package*.json ./
 RUN npm install --omit=dev
