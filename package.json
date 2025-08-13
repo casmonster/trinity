@@ -10,7 +10,7 @@
     "build-frontend": "vite build --config vite.config.ts",
     "build-backend": "tsc -p server/tsconfig.json",
     "build": "npm run build-frontend && npm run build-backend",
-    "start": "node server/dist/index.js"
+    "start": "node dist/server/index.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
