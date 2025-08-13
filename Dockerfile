@@ -1,28 +1,38 @@
-# ---- FRONTEND BUILD ----
-FROM node:20 AS build-frontend
-WORKDIR /app/client
-COPY package*.json ./
-RUN npm install
-WORKDIR /app/client
-COPY client/ ./
-# Build Vite output directly into server/public
-RUN npm run build -- --outDir ../server/public
-
-# ---- BACKEND BUILD ----
-FROM node:20 AS build-backend
+# ---- BUILD STAGE ----
+FROM node:20 AS build
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY server/ ./server
-COPY --from=build-frontend /app/server/public ./server/public
-WORKDIR /app/server
-RUN npm run build
 
-# ---- PRODUCTION ----
-FROM node:20-slim AS production
+# Install root dependencies
+COPY package*.json ./
+COPY client/package*.json ./client/
+COPY server/package*.json ./server/
+RUN npm install --workspaces
+
+# Copy source
+COPY client ./client
+COPY server ./server
+COPY shared ./shared
+
+# Build frontend into server/public
+RUN npm run build-frontend
+
+# Build backend into dist
+RUN npm run build-backend
+
+# ---- PRODUCTION STAGE ----
+FROM node:20 AS prod
 WORKDIR /app
-COPY --from=build-backend /app/server/dist ./dist
-COPY --from=build-backend /app/node_modules ./node_modules
-COPY --from=build-backend /app/package*.json ./
+
+# Install only prod dependencies
+COPY package*.json ./
+COPY server/package*.json ./server/
+RUN npm install --omit=dev --workspaces
+
+# Copy backend dist and frontend public
+COPY --from=build /app/server/dist ./server/dist
+COPY --from=build /app/server/public ./server/public
+COPY shared ./shared
+
+# Expose and start
 EXPOSE 5000
-CMD ["node", "dist/index.js"]
+CMD ["node", "server/dist/index.js"]
