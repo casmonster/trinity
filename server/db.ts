@@ -3,6 +3,10 @@ import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 import fs from "fs";
 import dotenv from "dotenv";
+import { Pool, neonConfig } from "@neondatabase/serverless";
+import { drizzle } from "drizzle-orm/neon-serverless";
+import ws from "ws";
+import * as schema from "../shared/schema.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,10 +22,6 @@ if (fs.existsSync(rootEnvPath)) {
   console.log(".env not found, using system environment variables");
 }
 
-import { Pool, neonConfig } from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-serverless";
-import ws from "ws";
-import * as schema from "../shared/schema.js";
 
 neonConfig.webSocketConstructor = ws;
 
