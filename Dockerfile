@@ -1,3 +1,6 @@
+# ----------------------
+# 1. Build stage
+# ----------------------
 FROM node:20 AS build
 WORKDIR /app
 
@@ -5,22 +8,31 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Copy source code
+# Copy all source files
 COPY . .
 
-# Build backend (output goes to dist/server)
-RUN npm run build-backend
+# Build frontend
+RUN npm run build-frontend   # output -> dist/public
 
-# Production image
-FROM node:20
+# Build backend
+RUN npm run build-backend    # output -> dist/server
+
+# ----------------------
+# 2. Production stage
+# ----------------------
+FROM node:20-slim AS production
 WORKDIR /app
 
-# Copy only the backend dist folder (nested)
+# Copy backend + frontend build artifacts
 COPY --from=build /app/dist/server ./dist/server
+COPY --from=build /app/dist/public ./dist/public
 
 # Copy package files for prod dependencies
 COPY package*.json ./
 RUN npm install --omit=dev
 
-# Run the compiled backend
+# Expose API port
+EXPOSE 5000
+
+# Start backend
 CMD ["node", "dist/server/server/index.js"]
