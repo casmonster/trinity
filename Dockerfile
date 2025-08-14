@@ -23,9 +23,11 @@ RUN npm run build-backend    # output -> dist/server
 FROM node:20-slim AS production
 WORKDIR /app
 
-# Copy backend + frontend build artifacts
+# Copy backend build
 COPY --from=build /app/dist/server ./dist/server
-COPY --from=build /app/dist/public ./dist/public
+
+# Copy frontend build INTO backend's expected public folder
+COPY --from=build /app/dist/public ./dist/server/server/public
 
 # Copy package files for prod dependencies
 COPY package*.json ./
