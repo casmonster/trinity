@@ -4,21 +4,25 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "outDir": "../dist/server",
-    "rootDir": "../server",
+    "rootDir": "..",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "baseUrl": "..",
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@shared/*": ["../shared/*"]
-    }
+      "@shared/*": ["shared/*"]
+    },
+    "types": ["node"]
   },
-   "include": [
-    "../server/**/*.ts",      
-    "../shared/**/*.ts",      
+  "include": [
+    "**/*.ts",
+    "../shared/**/*.ts",
+    "../vite.config.ts"
   ],
   "exclude": [
-    "../dist",
     "node_modules",
+    "../client",
+    "../**/dist"
   ]
 }
