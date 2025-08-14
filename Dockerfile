@@ -35,4 +35,4 @@ RUN npm install --omit=dev
 EXPOSE 5000
 
 # Start backend
-CMD ["node", "dist/server/index.js"]
+CMD ["node", "dist/server/server/index.js"]
