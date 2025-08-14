@@ -2,6 +2,7 @@ import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
 import { nanoid } from "nanoid";
+import { fileURLToPath } from "url";
 
 /** Simple log helper */
 export function log(message: string, source = "express") {
@@ -65,7 +66,7 @@ export async function setupVite(app: Express, server: import("http").Server) {
     }
   });
 }
-
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 /** Production static serving */
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
