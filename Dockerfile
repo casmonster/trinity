@@ -23,4 +23,4 @@ COPY package*.json ./
 RUN npm install --omit=dev
 
 # Run the compiled backend
-CMD ["node", "dist/server/index.js"]
+CMD ["node", "dist/server/server/index.js"]

@@ -18,11 +18,10 @@
   "include": [
     "**/*.ts",
     "../shared/**/*.ts",
-    "../vite.config.ts"
   ],
   "exclude": [
     "node_modules",
-    "../client",
-    "../**/dist"
+    "client",
+    "dist"
   ]
 }
