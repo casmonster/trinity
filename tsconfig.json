@@ -5,7 +5,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
     "noEmit": false,
-    "outDir": "server/dist",   
+    "outDir": "dist/server",   
     "rootDir": ".",
     "module": "ESNext",
     "strict": true,
