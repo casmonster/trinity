@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { insertContactSchema } from "@shared/schema";
+import { insertContactSchema } from "@shared/schema.js";
 import { storage } from "./storage";
 import { z } from "zod";
 import rateLimit from "express-rate-limit";
