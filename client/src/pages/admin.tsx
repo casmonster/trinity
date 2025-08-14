@@ -11,10 +11,17 @@ interface Contact {
 }
 
 export default function AdminPage() {
-  const { data: contacts, isLoading, error } = useQuery<Contact[]>({
-    queryKey: ['/api/contacts'],
-  });
+   const apiBaseUrl = (import.meta as any).env.VITE_API_BASE_URL || "/api";
 
+  // Fetch contact messages from the API
+const { data: contacts, isLoading, error } = useQuery<Contact[]>({
+    queryKey: ["contacts"],
+    queryFn: async () => {
+      const res = await fetch(`${apiBaseUrl}/contacts`);
+      if (!res.ok) throw new Error("Network response was not ok");
+      return res.json();
+    },
+  });
   if (isLoading) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
