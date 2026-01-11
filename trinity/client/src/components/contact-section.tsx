@@ -1,8 +1,5 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/components/ui/hooks/use-toast";
 import { validateContactForm, validateAndSanitizeInput } from "@/lib/security";
 
@@ -42,25 +39,7 @@ export default function ContactSection() {
     subject: "",
     message: ""
   });
-
-  const contactMutation = useMutation({
-    mutationFn: (data: typeof formData) => apiRequest("POST", "/api/contact", data),
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    },
-    onError: (error: any) => {
-      const errorMessage = error.message || "Please try again later or contact me directly.";
-      toast({
-        title: "Error sending message",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,22 +57,36 @@ export default function ContactSection() {
       return;
     }
     
-    // Sanitize data before sending
+    setIsSubmitting(true);
+
     try {
-      const sanitizedData = {
-        name: validateAndSanitizeInput(formData.name, 100),
-        email: validateAndSanitizeInput(formData.email, 254),
-        subject: validateAndSanitizeInput(formData.subject, 200),
-        message: validateAndSanitizeInput(formData.message, 2000),
-      };
-      
-      contactMutation.mutate(sanitizedData);
+        const sanitizedData = {
+            name: validateAndSanitizeInput(formData.name, 100),
+            email: validateAndSanitizeInput(formData.email, 254),
+            subject: validateAndSanitizeInput(formData.subject, 200),
+            message: validateAndSanitizeInput(formData.message, 2000),
+        };
+
+        const phoneNumber = "250780152723";
+        const messageBody = `Name: ${sanitizedData.name}\nEmail: ${sanitizedData.email}\nSubject: ${sanitizedData.subject}\n\nMessage:\n${sanitizedData.message}`;
+        const encodedMessage = encodeURIComponent(messageBody);
+        const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        window.open(waUrl, "_blank");
+
+        toast({
+            title: "Redirecting to WhatsApp",
+            description: "Please complete sending the message in WhatsApp.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error: any) {
       toast({
         title: "Validation Error",
         description: error.message,
         variant: "destructive",
       });
+    } finally {
+        setIsSubmitting(false);
     }
   };
 
@@ -214,10 +207,10 @@ export default function ContactSection() {
             </div>
             <button 
               type="submit" 
-              disabled={contactMutation.isPending}
+              disabled={isSubmitting}
               className="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold disabled:opacity-50"
             >
-              {contactMutation.isPending ? "Sending..." : "Send Message"}
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </motion.div>

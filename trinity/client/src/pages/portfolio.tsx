@@ -17,7 +17,7 @@ export default function Portfolio() {
       <footer className="bg-secondary text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-slate-300">
-            © 2024 Mugabe Trinity. All rights reserved. Built with passion and modern web technologies.
+            © 2026 Mugabe Trinity. All rights reserved. Built with passion and modern web technologies.
           </p>
         </div>
       </footer>
