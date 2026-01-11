@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "trinity/client/dist",
     "ignore": [
       "firebase.json",
       "**/.*",
